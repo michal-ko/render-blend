@@ -1,0 +1,6 @@
+Submit to render:
+blender --background monkey_test.blend --render-output ~/Desktop/aws_renderfarm_source/render_out2/ -E BLENDER_EEVEE --render-frame 1..120
+
+
+Play animation:
+blender -a ./render_out/*
