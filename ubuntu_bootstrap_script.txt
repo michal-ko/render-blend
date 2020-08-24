@@ -1,0 +1,5 @@
+#!/bin/bash
+apt-get update
+apt-get upgrade
+snap install blender --classic
+echo "<html><h1>healthy</h1></html>" > healthy.html
