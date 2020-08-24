@@ -2,4 +2,9 @@
 apt-get update
 apt-get upgrade
 snap install blender --classic
+cd /var
+mkdir www
+cd www
+mkdir html
+cd html
 echo "<html><h1>healthy</h1></html>" > healthy.html
