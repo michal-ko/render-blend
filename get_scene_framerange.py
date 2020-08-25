@@ -5,7 +5,8 @@ def get_framerange(scenepath):
     bpy.ops.wm.open_mainfile(filepath=scenepath)  # opens blender scene
     start_frame = bpy.context.scene.frame_start
     end_frame = bpy.context.scene.frame_end
-    return {"start_frame": start_frame, "end_frame": end_frame}
+    total_frames = int(end_frame) - int(start_frame)
+    return {"start_frame": start_frame, "end_frame": end_frame, "total_frames": total_frames}
 
 
 if __name__ == "__main__":
