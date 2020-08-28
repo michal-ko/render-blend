@@ -4,9 +4,10 @@ apt-get upgrade -y
 apt-get install -y apache2
 systemctl enable apache2.service
 apt install awscli -y
-mkdir ~/BlenderInstaller
-cd ~/BlenderInstaller
+mkdir /home/ubuntu/BlenderInstaller
+cd /home/ubuntu/BlenderInstaller
 wget https://download.blender.org/release/Blender2.83/blender-2.83.5-linux64.tar.xz
 tar -xf blender-2.83.5-linux64.tar.xz
-rm ./blender-2.83.5-linux64.tar.xz
+rm /home/ubuntu/BlenderInstaller/blender-2.83.5-linux64.tar.xz
 echo "<html><h1>healthy</h1></html>" > /var/www/html/index.html
+systemctl restart apache2
