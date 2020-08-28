@@ -1,10 +1,12 @@
 #!/bin/bash
-apt-get update
-apt-get upgrade
-snap install blender --classic
-cd /var
-mkdir www
-cd www
-mkdir html
-cd html
-echo "<html><h1>healthy</h1></html>" > healthy.html
+apt-get update -y
+apt-get upgrade -y
+apt-get install -y apache2
+systemctl enable apache2.service
+apt install awscli -y
+mkdir ~/BlenderInstaller
+cd ~/BlenderInstaller
+wget https://download.blender.org/release/Blender2.83/blender-2.83.5-linux64.tar.xz
+tar -xf blender-2.83.5-linux64.tar.xz
+rm ./blender-2.83.5-linux64.tar.xz
+echo "<html><h1>healthy</h1></html>" > /var/www/html/index.html
